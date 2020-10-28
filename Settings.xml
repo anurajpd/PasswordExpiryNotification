@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<Settings>
+  <Domain>mwanitest.local</Domain>
+  <ADServer>tswvdc01.mwanitest.local</ADServer>
+  <InitialNotifyDays>50</InitialNotifyDays>
+  <DailyNotifyDays>45</DailyNotifyDays>
+  <SMTPServer>relay.mwanitest.com.qa</SMTPServer>
+  <SMTPPort>25</SMTPPort>
+  <SMTPUseSSL>false</SMTPUseSSL>
+  <MailFrom>alerttest@mwanitest.com.qa</MailFrom>
+  <MailSubject>Password Expiry Notification</MailSubject>
+  <MailUser>alerttest@mwanitest.com.qa</MailUser>
+  <MailPassword>01000000d08c9ddf0115d1118c7a00c04fc297eb01000000d5f2b28016c3be42a5b0adb4c954d28100000000020000000000106600000001000020000000ea6adb7fb5d9c1b077b3ec9c168d29588140f0541ccd4f66b1df06af91fbec09000000000e8000000002000020000000382d17693618163ea9f5e68d56c0716adfb8610b7b99e2c7696134d203b0364920000000fd2558ea73d398abea5b9964a265bcaadac5acab9b55b6fb4f13e9b3effd320f40000000a78eab9784db69f1da6b90a98df9fcd1a8f65b434f8e922815c1777519937cc902ee818c719ff0d0c9ec2a980a7b35cab8353b8f291d277c85d651a6a281bd3d</MailPassword>
+  <ADUser>alerttest@mwanitest.local</ADUser>
+  <ADPassword>01000000d08c9ddf0115d1118c7a00c04fc297eb01000000d5f2b28016c3be42a5b0adb4c954d28100000000020000000000106600000001000020000000a1571e3b86d6b5de1d35898515b19d2533aec9cf985a7004d94bece2156a2a22000000000e8000000002000020000000f074eda8091d0f3f9b7bbe4eb26f62f272bc1bd42988aa8cadc833436a4c441d200000000a2f1f00a0b6c615c0f4502bccb496ee4c0ec4a09dc6e08360155536096acabb400000008b2f676f875b177a9d812b843b36fb8d380893a20a22e93ff58e50c8193577a6b8193cdf5a24436628d84d79c3cff796f10a183d8a03e098abca9a02ece4cd1e</ADPassword>
+</Settings>
