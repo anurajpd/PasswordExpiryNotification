@@ -1,0 +1,15 @@
+2020-10-28 07:27:15 WARNING: Log Message
+2020-10-28 07:27:49 INFO: Log Message information
+2020-10-28 07:28:30 ERROR: This is an error message
+2020-10-28 08:10:34 INFO: Requested Credential Update
+2020-10-28 08:10:34 INFO: Loading configuration file $Path
+2020-10-28 08:10:34 INFO: Updating same credential for both AD User and Mail User
+2020-10-28 08:10:52 INFO: Updated same credential for both AD User and Mail User
+2020-10-28 08:12:47 INFO: Requested Credential Update
+2020-10-28 08:12:47 INFO: Loading configuration file $Path
+2020-10-28 08:12:47 INFO: Updating both AD User and Mail User credential
+2020-10-28 08:13:08 INFO: Updated both AD User and Mail User credential
+2020-10-28 08:13:39 INFO: Requested Credential Update
+2020-10-28 08:13:39 INFO: Loading configuration file $Path
+2020-10-28 08:13:39 INFO: Updating both AD User and Mail User credential
+2020-10-28 08:13:58 ERROR: Empty password provided for Mail User. Exiting the application.
