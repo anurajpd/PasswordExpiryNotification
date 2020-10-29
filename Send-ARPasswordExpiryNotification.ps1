@@ -132,6 +132,8 @@ function Send-ARPasswordExpiryNotification{
         [Parameter(Mandatory=$false)]
         [switch]$Configure=$false
     )
+    $ErrorActionPreference = 'Stop'
+    $WarningPreference = 'SilentlyContinue'
     try{
         $configFile = $Path + 'Settings.xml'
         $inputFile = $Path + 'Users.csv'
