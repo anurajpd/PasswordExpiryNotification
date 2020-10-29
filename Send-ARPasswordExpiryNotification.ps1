@@ -205,7 +205,7 @@ function Send-ARPasswordExpiryNotification{
             Write-ARLog -Message ('Validating the configuration file' + $configFile)
             foreach($key in ($config.Keys)){
                 if(!$xmlConfig.$key){
-                    $msg = 'Configuration file validation error. Parameter ' + $param + ' is missing. Exiting Application.'
+                    $msg = 'Configuration file validation error. Parameter ' + $key + ' is missing. Exiting Application.'
                     Write-ARLog -Message $msg -Level 'Error'
                     exit 1
                 }
