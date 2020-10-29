@@ -246,9 +246,9 @@ function Send-ARPasswordExpiryNotification{
         $pwdExpiredUsers = [System.Collections.ArrayList]@()
         $pwdChangedUsers = [System.Collections.ArrayList]@()
         $pendingUsers = [System.Collections.ArrayList]@()
-        foreach($adUser in $adUsers){
+        foreach($ad in $adUsers){
             foreach($user in $users){           
-                if($user.UserName -eq $adUser.SamAccountName){
+                if($user.UserName -eq $ad.SamAccountName){
                     # HTML Template Email Body.
                     $mailBody = @"
                     <div style="font-family:verdana;">
@@ -256,7 +256,7 @@ function Send-ARPasswordExpiryNotification{
                         <h5>Greetings!!!</h5>
                         <p>
                             Password of you account <strong>accountName</strong> will expire in <strong>noDays</strong> Days. 
-                            </br>Please change you password before <strong>expireDate</strong>.
+                            </br>Please change you password before <strong>expiryDate</strong>.
                             </br>Thank you for your understanding.
                             </br>
                             </br>Please contact the Admin Team for any assistance.
@@ -269,27 +269,29 @@ function Send-ARPasswordExpiryNotification{
                     </div>
 "@
                     $sendMail = $false
-                    $passwordExpiryDate = [datetime]::FromFileTime($adUser."msDS-UserPasswordExpiryTimeComputed")
+                    $passwordExpiryDate = [datetime]::FromFileTime($ad."msDS-UserPasswordExpiryTimeComputed")
                     $passwordExpiryDays = (New-TimeSpan -Start $today -End $passwordExpiryDate).Days
-                    $passwordChangedDays = (New-TimeSpan -Start $adUser.PasswordLastSet -End $today).Days
+                    $passwordChangedDays = (New-TimeSpan -Start $ad.PasswordLastSet -End $today).Days
                     $mailTo = $user.Mail.Split(':')
-                    $mailBody = $mailBody.Replace('displayName',$adUser.DisplayName)
-                    $mailBody = $mailBody.Replace('accountName',$adUser.SamAccountName)
+                    $mailBody = $mailBody.Replace('displayName',$ad.DisplayName)
+                    $mailBody = $mailBody.Replace('accountName',$ad.SamAccountName)
+                    $mailBody = $mailBody.Replace('expiryDate',$ad.PasswordLastSet)
+                    $mailBody = $mailBody.Replace('noDays',$passwordExpiryDays)
                     if($passwordExpiryDays -eq $initialNotifyDays){
                         $sendMail = $true
                     }elseif($passwordExpiryDays -le $dailyNotifyDays){
-                        $pendingUsers.Add($adUser.SamAccountName)
+                        $pendingUsers.Add($ad.SamAccountName)
                         $sendMail = $true
                     }elseif($passwordExpiryDays -le 0){
-                        $pwdExpiredUsers.Add($adUser.SamAccountName)
+                        $pwdExpiredUsers.Add($ad.SamAccountName)
                     }
 
                     if($passwordChangedDays -lt $initialNotifyDays){
-                        $pwdChangedUsers.Add($adUser.SamAccountName)
+                        $pwdChangedUsers.Add($ad.SamAccountName)
                     }
                     
                     if($sendMail){
-                        $notifiedUsers.Add($adUser.SamAccountName)
+                        $notifiedUsers.Add($ad.SamAccountName)
                         Write-ARLog -Message ('Sending mail for user ' + $ad.SamAccountName)
                         Send-MailMessage -From $mailFrom -to $mailTo -Subject $mailSubject -Body $mailBody -SmtpServer $smtpServer -Port $smtpPort -Credential $mailCredential
                     }
