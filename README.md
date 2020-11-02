@@ -1,5 +1,5 @@
 ## PasswordExpiryNotification
-</br>
+
 .SYNOPSIS 
 </br>Script to send automatic password expiry mail notification.
 
