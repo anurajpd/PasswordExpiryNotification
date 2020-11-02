@@ -1,18 +1,23 @@
 ## PasswordExpiryNotification
 
 .SYNOPSIS 
-</br>Script to send automatic password expiry mail notification.
+</br>Send password expiry notification email to Active Directory users listed in the input file.
 
 .DESCRIPTION
-</br>Script looks in the base path for the configuration file, input file and log file.
-</br>Script will check for password expiry of users specified in the input file and send 
-</br>password expiry notification email.
+</br>Script will check for password expiry of users specified in the input file and send password expiry notification email.
+</br>All the configuration parameters are stored in the configuration file - Settings.xml. 
+</br>Use **Send-ARPasswordExpiryNotification -Configure** to generate the configuration file.
+
+* Base Path: $Path (Default is current working directory)
+* Configuration File: $Path/Settings.xml
+* Input File: $Path/Users.csv
+* Log File: ./Application.log
 
 .INPUTS
-* Base Path: $Path or current working directory.
-* Base Path:/Settings.xml - Configuration File
-* Base Path:/Users.csv - Input File
-* Base Path:/Application.log - Log File
+* Base Path: $Path (Default is current working directory)
+* Configuration File: $Path/Settings.xml
+* Input File: $Path/Users.csv
+* Log File: ./Application.log
    
 .NOTES
 * Created by: Anuraj PD
@@ -50,4 +55,4 @@ at the current workingdirectory.
 .EXAMPLE
 </br>To send the notification mail. Script will look for configuration file, input file
 at the path provided in $Path parameter.
-**Send-ARPasswordExpiryNotification -Path 'C:\PasswordExpiryNotification'**
+</br>**Send-ARPasswordExpiryNotification -Path 'C:\PasswordExpiryNotification'**
