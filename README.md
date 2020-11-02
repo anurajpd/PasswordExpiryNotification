@@ -7,8 +7,9 @@
 </br>Script will check for password expiry of users specified in the input file and send password expiry notification email.
 </br>All the configuration parameters are stored in the configuration file - Settings.xml. 
 </br>Download the folder Send-ARPasswordExpiryNotification and change working directory to the folder
+</br>
 </br>**Usage**
-></br>***cd Send-ARPasswordExpiryNotification** # Create input file Users.csv in this folder
+>***cd Send-ARPasswordExpiryNotification** # Create input file Users.csv in this folder
 </br>**Import-Module ./Send-ARPasswordExpiryNotification.psm1**
 </br>**Send-ARPasswordExpiryNotification -Configure** # Generate the configuration file.
 </br>**Send-ARPasswordExpiryNotification***
