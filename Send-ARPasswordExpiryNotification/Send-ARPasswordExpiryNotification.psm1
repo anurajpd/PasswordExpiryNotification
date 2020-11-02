@@ -118,7 +118,7 @@ function Send-ARPasswordExpiryNotification{
     try{
         $configFile = $Path + 'Settings.xml'
         $inputFile = $Path + 'Users.csv'
-        $logFile = $Path + 'application.log'
+        $logFile = $Path + 'Application.log'
         $outputFile = $Path + 'Report.txt'
 
         # Configuration Parameters
