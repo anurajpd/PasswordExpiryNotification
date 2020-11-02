@@ -1,17 +1,17 @@
 <?xml version="1.0"?>
 <Settings>
-  <Domain>mwanitest.local</Domain>
-  <ADServer>tswvdc01.mwanitest.local</ADServer>
-  <InitialNotifyDays>50</InitialNotifyDays>
-  <DailyNotifyDays>45</DailyNotifyDays>
-  <SMTPServer>relay.mwanitest.com.qa</SMTPServer>
-  <SMTPPort>25</SMTPPort>
-  <SMTPUseSSL>false</SMTPUseSSL>
-  <MailFrom>alerttest@mwanitest.com.qa</MailFrom>
+  <DailyNotifyDays>5</DailyNotifyDays>
   <MailSubject>Password Expiry Notification</MailSubject>
-  <AdminMail>test@test.com</AdminMail>
-  <MailUser>mailuser@test.com</MailUser>
-  <MailPassword>01000000d08c9ddf0115d1118c7a00c04fc297eb01000000a6238103773f764785b0311c1dc992530000000002000000000003660000c000000010000000f600c80767362def1b4a8a33ed6d5d170000000004800000a000000010000000b01b42c21a274933dbfebf1ba30d582c1800000073a0b8aad6ca0724865ecf05e8d6d8fc8f11e5a8aedc418514000000ba638933c8f8586594868fe3a61d99396c5deb78</MailPassword>
-  <ADUser>aduser@test.com</ADUser>
-  <ADPassword>01000000d08c9ddf0115d1118c7a00c04fc297eb01000000a6238103773f764785b0311c1dc992530000000002000000000003660000c00000001000000063749731b7a0b6e0cb9641a87806aa130000000004800000a000000010000000d000751ea22fc6cecc3503973c834e8d10000000a2a46f1bf9fe52ff5c83e70212b0a57314000000157521f4cc0b06a3248ba3eb0ee6a9b22959b230</ADPassword>
+  <AdminMail>adminmail@domain.local</AdminMail>
+  <SMTPUseSSL>false</SMTPUseSSL>
+  <ADUser>aduser@domain.local</ADUser>
+  <ADPassword>01000000d08c9ddf0115d1118c7a00c04fc297eb01000000a6238103773f764785b0311c1dc992530000000002000000000003660000c0000000100000003f09b73a6ef700c6f69970f3097998090000000004800000a0000000100000008d2f1ac2a1324875e8e345ea705774fc30000000ae2e98c7f258b964f38ae0ffa2046dd6471ed5decae8b06516c81e2c48cd571aa26f7c1be1287a05300d628dffebe4321400000055b2f4b4be5bccf21b1555a8a8d1b0e918af3ceb</ADPassword>
+  <InitialNotifyDays>15</InitialNotifyDays>
+  <MailFrom>mailfrom@domain.local</MailFrom>
+  <MailUser>mailuser@domain.local</MailUser>
+  <MailPassword>01000000d08c9ddf0115d1118c7a00c04fc297eb01000000a6238103773f764785b0311c1dc992530000000002000000000003660000c000000010000000541e3ee1d38a45804c5ea00d9c5d0edf0000000004800000a00000001000000019d5be1fdb73f308d554aa28cbc4e5dc180000008eb24ee7e0268dbbcc2b6fab083842448dea0e7b1f58d33414000000e9ab369cd4edc72ecff8bb57e9cef40fd560c08b</MailPassword>
+  <SMTPServer>smtp.domain.local</SMTPServer>
+  <SMTPPort>25</SMTPPort>
+  <ADServer>adserver.domain.local</ADServer>
+  <Domain>test.domain.local</Domain>
 </Settings>

@@ -1,22 +1,3 @@
-<#
-.Synopsis
-   Sends password expiry mail notification.
-.DESCRIPTION
-   Sends password expiry mail notification.
-.NOTES
-   Created by: Anuraj PD
-   Modified:  Anuraj PD
-
-   Changelog:
-
-   To Do:
-.PARAMETER Message
-   Message is the content that you wish to add to the log file. 
-.EXAMPLE
-  Example here
-.LINK
-   
-#>
 function Write-ARLog{
     [CmdletBinding()]
     Param
@@ -27,29 +8,29 @@ function Write-ARLog{
         [ValidateSet('Information','Warning','Error')]
         [string]$Level='Information',
         [Parameter(Mandatory=$false)]
-        [string]$Path='.\application.log'
+        [string]$LogFile='.\Application.log'
     )
 
-    if(!(Test-Path $Path)){
-        $logFile = New-Item $Path -Force -ItemType File 
+    if(!(Test-Path $LogFile)){
+        New-Item $LogFile -Force -ItemType File | Out-Null
     }
 
-    $FormattedDate = Get-Date -Format "yyyy-MM-dd HH:mm:ss" 
+    $logDateTime = Get-Date -Format "yyyy-MM-dd HH:mm:ss" 
 
     switch ($Level) { 
         'Error' { 
-            $LevelText = 'ERROR:' 
+            $logLevel = 'ERROR:' 
             } 
         'Warning' { 
-            $LevelText = 'WARNING:' 
+            $logLevel = 'WARNING:' 
             } 
         'Information' {
-            $LevelText = 'INFO:' 
+            $logLEvel = 'INFO:' 
             } 
         } 
      
     # Write log entry to $Path 
-    "$FormattedDate $LevelText $Message" | Out-File -FilePath $Path -Append 
+    "$logDateTime $logLevel $Message" | Out-File -FilePath $LogFile -Append 
 }
 function New-ARConfigurationFile{
     [CmdletBinding()]
@@ -368,7 +349,7 @@ function Send-ARPasswordExpiryNotification{
     }
 }
 
-Send-ARPasswordExpiryNotification
+Export-ModuleMember -Function Send-ARPasswordExpiryNotification
 
 
 

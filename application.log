@@ -1,15 +1,31 @@
-2020-10-28 07:27:15 WARNING: Log Message
-2020-10-28 07:27:49 INFO: Log Message information
-2020-10-28 07:28:30 ERROR: This is an error message
-2020-10-28 08:10:34 INFO: Requested Credential Update
-2020-10-28 08:10:34 INFO: Loading configuration file $Path
-2020-10-28 08:10:34 INFO: Updating same credential for both AD User and Mail User
-2020-10-28 08:10:52 INFO: Updated same credential for both AD User and Mail User
-2020-10-28 08:12:47 INFO: Requested Credential Update
-2020-10-28 08:12:47 INFO: Loading configuration file $Path
-2020-10-28 08:12:47 INFO: Updating both AD User and Mail User credential
-2020-10-28 08:13:08 INFO: Updated both AD User and Mail User credential
-2020-10-28 08:13:39 INFO: Requested Credential Update
-2020-10-28 08:13:39 INFO: Loading configuration file $Path
-2020-10-28 08:13:39 INFO: Updating both AD User and Mail User credential
-2020-10-28 08:13:58 ERROR: Empty password provided for Mail User. Exiting the application.
+2020-11-02 06:43:29 INFO: Starting the execution for password expiry mail notification.
+2020-11-02 06:43:29 INFO: Validating the input file./Users.csv
+2020-11-02 06:43:29 INFO: Validating the configuration file./Settings.xml
+2020-11-02 06:43:29 INFO: Getting users from active directory server adserver.domain.local
+2020-11-02 07:42:53 INFO: Starting the execution for password expiry mail notification.
+2020-11-02 07:42:53 INFO: Validating the input file./Users.csv
+2020-11-02 07:42:53 ERROR: Completed validating input file ./Users.csv
+2020-11-02 07:42:53 INFO: Validating the configuration file./Settings.xml
+2020-11-02 07:42:53 ERROR: Completed validating configuration file ./Settings.xml
+2020-11-02 07:42:53 INFO: Getting users from active directory server adserver.domain.local
+2020-11-02 07:42:53 ERROR: The term 'Get-ADUser' is not recognized as the name of a cmdlet, function, script file, or operable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+2020-11-02 07:42:53 INFO: Unhandled exception occured. Exiting application.
+2020-11-02 07:58:49 INFO: Starting the execution for password expiry mail notification.
+2020-11-02 07:58:49 INFO: Validating the input file./Users.csv
+2020-11-02 07:58:49 ERROR: Completed validating input file ./Users.csv
+2020-11-02 07:58:49 INFO: Validating the configuration file./Settings.xml
+2020-11-02 07:58:49 ERROR: Completed validating configuration file ./Settings.xml
+2020-11-02 07:58:49 INFO: Getting users from active directory server adserver.domain.local
+2020-11-02 07:58:49 ERROR: The term 'Get-ADUser' is not recognized as the name of a cmdlet, function, script file, or operable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+2020-11-02 07:58:49 INFO: Unhandled exception occured. Exiting application.
+2020-11-02 08:18:01 INFO: Starting the execution for password expiry mail notification.
+2020-11-02 08:18:01 INFO: Validating the input file./Users.csv
+2020-11-02 08:18:01 ERROR: Completed validating input file ./Users.csv
+2020-11-02 08:18:01 INFO: Validating the configuration file./Settings.xml
+2020-11-02 08:18:01 ERROR: Completed validating configuration file ./Settings.xml
+2020-11-02 08:18:01 INFO: Getting users from active directory server adserver.domain.local
+2020-11-02 08:18:01 ERROR: The term 'Get-ADUser' is not recognized as the name of a cmdlet, function, script file, or operable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+2020-11-02 08:18:01 INFO: Unhandled exception occured. Exiting application.
