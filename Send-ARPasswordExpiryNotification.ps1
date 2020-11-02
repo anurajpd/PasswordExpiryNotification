@@ -190,6 +190,7 @@ function Send-ARPasswordExpiryNotification{
                     exit 1
                 }
             }
+            Write-ARLog -Message ('Completed validating input file ' + $inputFile) -Level 'Error'
         }
         catch{
             $msg = 'Input file error, please validate the input file. ' + $PSItem.ToString()
@@ -210,12 +211,12 @@ function Send-ARPasswordExpiryNotification{
                     exit 1
                 }
             }
+            Write-ARLog -Message ('Completed validating configuration file ' + $configFile) -Level 'Error'
         }
         catch{
             $msg = 'Configuration file error. Please regenerate the configuration file. ' + $PSItem.ToString()
             Write-ARLog -Message $msg -Level 'Error'
-        }
-        
+        }        
         
         $adServer = $xmlConfig.ADServer
         [int]$initialNotifyDays = $xmlConfig.InitialNotifyDays
@@ -367,7 +368,7 @@ function Send-ARPasswordExpiryNotification{
     }
 }
 
-Send-ARPasswordExpiryNotification -Configure
+Send-ARPasswordExpiryNotification
 
 
 
