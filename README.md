@@ -9,10 +9,11 @@
 </br>Download the folder Send-ARPasswordExpiryNotification and change working directory to the folder
 </br>
 </br>**Usage**
->***cd Send-ARPasswordExpiryNotification** # Create input file Users.csv in this folder
-</br>**Import-Module ./Send-ARPasswordExpiryNotification.psm1**
-</br>**Send-ARPasswordExpiryNotification -Configure** # Generate the configuration file.
-</br>**Send-ARPasswordExpiryNotification***
+>***cd Send-ARPasswordExpiryNotification
+</br>Create input file Users.csv in this folder
+</br>Import-Module ./Send-ARPasswordExpiryNotification.psm1
+</br>Send-ARPasswordExpiryNotification -Configure # Generate the configuration file.
+</br>Send-ARPasswordExpiryNotification***
 
 .INPUTS
 * Base Path: $Path (Default is current working directory)
